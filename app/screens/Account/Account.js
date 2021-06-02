@@ -11,12 +11,12 @@ import Loading from "../../components/Loading";
 const Account = () => {
   const [login, setLogin] = useState(null);
 
-  /* useEffect(() => {
+  useEffect(() => {
     firebase.auth().onAuthStateChanged(function (user) {
       console.log(user);
       !user ? setLogin(false) : setLogin(true);
     });
-  }, [login]);*/
+  }, [login]);
 
   if (login === null) return <Loading text="Loading..." isVisible={true} />;
 

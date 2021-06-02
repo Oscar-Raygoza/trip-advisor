@@ -9,9 +9,8 @@ const Loading = (props) => {
       isVisible={isVisible}
       windowBackgroundColor="rgba(0,0,0,0.2)"
       overleyBackgroundColor="transparent"
-      overleyStyles={styles.overlay}
     >
-      <View style={styles.container}>
+      <View>
         <ActivityIndicator size="large" color="#F00" />
         {text && <Text style={styles.text}> {text} </Text>}
       </View>
@@ -24,13 +23,13 @@ export default Loading;
 const styles = StyleSheet.create({
   overlay: {
     height: 100,
-    width: 200,
+    width: 500,
     backgroundColor: "#fff",
     borderColor: "#F00",
     borderWidth: 2,
     borderRadius: 10,
   },
-  container: {
+  view: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
@@ -39,5 +38,6 @@ const styles = StyleSheet.create({
     color: "#F00",
     textTransform: "uppercase",
     marginTop: 10,
+    fontFamily: "Poppins",
   },
 });
