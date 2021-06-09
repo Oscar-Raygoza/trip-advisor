@@ -1,13 +1,26 @@
 import firebase from "firebase/app";
+import {
+  API_KEY,
+  AUTH_DOMAIN,
+  PROJECT_ID,
+  STORAGE_BUCKET,
+  MESSAGING_SENDER_ID,
+} from "@env";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDfWGXkkS9ovsA5o0Au4bnalQ1EOa7MIzA",
-  authDomain: "trip-advisor-ed78f.firebaseapp.com",
-  projectId: "trip-advisor-ed78f",
-  storageBucket: "trip-advisor-ed78f.appspot.com",
-  messagingSenderId: "446260614175",
-  appId: "1:446260614175:web:1d15d95e12f9e3e3f3312a",
+  apiKey: API_KEY,
+  authDomain: AUTH_DOMAIN,
+  projectId: PROJECT_ID,
+  storageBucket: STORAGE_BUCKET,
+  messagingSenderId: MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
 };
-
+console.log(
+  API_KEY,
+  AUTH_DOMAIN,
+  PROJECT_ID,
+  STORAGE_BUCKET,
+  MESSAGING_SENDER_ID
+);
 // Initialize Firebase
 export const firebaseApp = firebase.initializeApp(firebaseConfig);
